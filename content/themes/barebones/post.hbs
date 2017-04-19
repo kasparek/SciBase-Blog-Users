@@ -1,0 +1,42 @@
+{{!< default}}
+
+<div class="row">
+  <div class="col-xs-12">
+    {{#post}}
+
+    <article class="{{post_class}}">
+      <header class="m-b-md">
+        <h1 class="display-2 headline">{{title}}</h1>
+        <div class="byline small text-muted">
+          <time pubdate datetime="{{date format="X"}}">{{date format="MMM. DD, YYYY"}}</time>
+          {{tags prefix=" &mdash; "}}
+        </div>
+      </header>
+
+      <div class="m-b-lg copy">
+        {{content}}
+      </div>
+
+      <footer class="m-b-lg">
+        {{#author}} 
+        <div class="media">
+          <a class="media-left" href="{{url}}">
+            <img class="media-object img-rounded img-thumbnail" alt="{{name}}" src="{{image}}"/>
+          </a>
+          <div class="media-body">
+            <h3 class="media-heading">{{name}}</h3>
+            <p class="text-muted">{{location}}</p>
+          </div>
+        </div>
+        {{/author}}
+      </footer>
+
+      <aside role="complementary" class="m-b-lg comments">
+        <div id="disqus_thread"></div>
+      </aside>
+
+    </article>
+
+    {{/post}}
+  </div>
+</div>

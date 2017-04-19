@@ -1,0 +1,45 @@
+{
+  "name": "barebones-ghost",
+  "version": "0.1.0",
+  "description": "A barebones ghost theme using Bootstrap 4",
+  "homepage": "https://cfralick.github.io/barebones-ghost",
+  "keywords": [
+    "minimalist",
+    "barebones",
+    "minimal",
+    "bootstrap",
+    "Adobe fonts"
+  ],
+  "license": "BSD-2-Clause",
+  "author": {
+    "name": "Clint Fralick",
+    "email": "cfralick@creeperengine.com",
+    "url": "https://cfralick.github.io"
+  },
+  "bugs": {
+    "url": "https://github.com/cfralick/barebones-ghost/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cfralick/barebones-ghost"
+  },
+  "config": {
+    "css": "assets/css/barebones.css",
+    "js": "assets/js/barebones.js"
+  },
+  "scripts": {
+    "clean": "rm assets/*/*.min.*",
+    "lint": "jshint ${npm_package_config_js}",
+    "minify:css": "cleancss ${npm_package_config_css} -o ${npm_package_config_css/%.*/.min.css}",
+    "minify:js": "uglifyjs ${npm_package_config_js} -o ${npm_package_config_js/%.*/.min.js}",
+    "minify": "npm run minify:css; npm run minify:js",
+    "zip": "zip -r ../${npm_package_name}.zip . --include=\"*.hbs\" --include=\"./*.min.*\" --exclude=\"*node_modules/*\" ",
+    "build:zip": "npm run minify; npm run zip",
+    "build": "npm run lint; npm run build:zip; npm run clean"
+  },
+  "devDependencies": {
+    "clean-css": "^3.4.8",
+    "jshint": "^2.8.0",
+    "uglify-js": "^2.6.1"
+  }
+}

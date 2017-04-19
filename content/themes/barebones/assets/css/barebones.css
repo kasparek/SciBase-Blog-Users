@@ -1,0 +1,232 @@
+/*
+ * screen.css
+ * Copyright (C) 2015 cfralick
+ *
+ * Distributed under terms of the MIT license.
+ */
+@import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600|Source+Code+Pro|Source+Sans+Pro:300,400,600);
+
+html {
+  height:100%;
+  font-size: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: "Source Sans Pro";
+  font-size: 1rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+  -moz-font-smoothing:antialiased;
+  -ms-font-smoothing:antialiased;
+  -o-font-smoothing:antialiased;
+  font-smoothing: antialiased;
+  text-shadow: 0px 0px 1px rgba(255,255,255.05);
+}
+
+main {
+  min-height: 100%;
+  padding-top: 4rem;
+  margin-bottom: -2rem;
+}
+
+main:after {
+  content: " ";
+  height: 2rem;
+  display: block;
+}
+
+
+@media(min-width: 10em) {
+  html { font-size: 106.7%; }
+}
+
+@media(min-width: 22em) {
+  html { font-size: 113.8%; }
+}
+
+@media(min-width: 34em) {
+  html { font-size: 129.6%; }
+}
+
+@media(min-width: 48em) {
+  html { font-size: 138.3%; }
+}
+
+@media(min-width: 62em) {
+  html { font-size: 147.6%; }
+}
+
+h1 { font-size: 1.296em; }
+h2 { font-size: 1.138em; }
+h3 { font-size: 1.067em; }
+h4 { font-size: 1em; }
+h5, h6 { font-size: 0.937em; }
+
+
+pre, code {
+  font-family: "Source Code Pro";
+}
+pre,
+blockquote.blockquote,
+.navbar:last-child > * {
+  font-size: .85em;
+}
+
+pre {
+  padding: 1rem;
+}
+
+a:link,
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 30rem;
+}
+
+main.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+main.container > .row {
+  flex: 1 1 auto;
+}
+
+.navbar {
+  font-size: initial;
+  padding: .5em 1em;
+}
+
+.navbar,
+.navbar.navbar-light {
+  background-color:#fff;
+}
+
+.navbar:first-child {
+  float:left;
+  border-bottom: 1px solid #f9f9f9;
+   padding-left: 0; 
+  padding-right: 0; 
+}
+
+.navbar:last-child {
+  max-height: 2rem;
+  padding-bottom:0;
+}
+
+.navbar .navbar-brand {
+  padding-top: .25em;
+  padding-bottom: .25em;
+  font-size: 1.25em;
+}
+
+.navbar-nav a {
+  padding-top: .425em;
+  padding-bottom: .425em;
+}
+
+.headline a,
+.navbar a,
+.navbar a:hover {
+  color:inherit;
+}
+
+.display-1 { font-size: 1.414em; }
+.display-2 { font-size: 1.767em; }
+.display-3 { font-size: 1.999em; }
+.display-4 { font-size: 2.499em; }
+
+.copy {
+  line-height: 1.4;
+  font-family: "Source Serif Pro";
+  text-align: justify;
+}
+
+.copy p,
+.copy ul {
+  margin-bottom: 1em;
+}
+
+.copy img {
+  display:block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container .row .post {
+  margin-bottom: 1.5rem;
+}
+
+.container .row:last-child .post {
+  margin-bottom: .5rem;
+}
+
+blockquote.blockquote {
+  color: #818a91;
+}
+
+blockquote.blockquote,
+.form-control {
+  font-family: "Source Sans Pro";
+}
+
+h1, 
+h2, 
+h3, 
+h4,
+.headline {
+  font-weight: 600;
+}
+
+.media-object {
+  width:2.8em;
+  height: auto;
+}
+
+address, .author {
+  display: inline-block;
+}
+
+.pager {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.pager .nav-item .nav-link {
+  padding: 0 9px;
+  border-radius: 4px;
+  border: none;
+}
+
+#disqus_thread {
+  opacity: 0;
+}
+
+div.tooltip { 
+  font-size: 12px !important; 
+  font-family: "Source Sans Pro"; 
+  opacity: .2;
+}
+.copy p + ul {
+   margin-top: -.5em;
+}
+.navbar-nav > a { 
+   text-transform: capitalize; 
+}
+#at4-share > a.at-share-btn > span.at-icon-wrapper {
+  background-color: rgba(0,0,0,.3) !important;
+}
+
+#at4-share > a.at-share-btn:hover > span.at-icon-wrapper {
+  background-color: rgba(0,0,0,.6) !important;
+}
+
+#at4-share > a.at-share-btn:visited > span.at-icon-wrapper {
+  background-color: rgba(0,0,0,.9) !important;
+}

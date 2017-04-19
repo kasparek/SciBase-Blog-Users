@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{{meta_description}}" />
+    <meta name="HandheldFriendly" content="True" />
+
+    <title>{{meta_title}}</title>
+    <link 
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" 
+      rel="stylesheet" 
+      integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" 
+      crossorigin="anonymous">
+    <link 
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha256-GHW2S7IZAQe8+YkyL99LyDj1zdWXSPOG+JZafCtKiSc= sha512-vxM32w6T7zJ83xOQ6FT4CEFnlasqmkcB0+ojgbI0N6ZtSxYvHmT7sX2icN07TqEqr5wdKwoLkmB8sAsGAjCJHg==" 
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="{{asset "css/barebones.min.css"}}"/>    
+    {{ghost_head}}
+  </head>
+
+  <body class="{{body_class}}">
+    <header role="banner" class="navbar navbar-full navbar-light navbar-fixed-top">
+      <div class="container">
+        <a class="navbar-brand">{{@blog.title}}</a>
+        {{navigation}}
+      </div>
+    </header>
+
+    <main role="main" class="container">
+    {{{body}}}
+    </main>
+
+    <footer role="contentinfo" class="navbar navbar-light navbar-full">
+      <div class="container">
+        {{#is "home,tag,author,index"}}
+          {{pagination}}
+        {{else}}
+          {{#is "post"}}{{>adjacent}}{{/is}}
+        {{/is}}
+      </div>
+    </footer>
+    {{ghost_foot}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/0.7.2/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/js/bootstrap.min.js" integrity="sha256-+h0g0j7qusP72OZaLPCSZ5wjZLnoUUicoxbvrl14WxM= sha512-0z9zJIjxQaDVzlysxlaqkZ8L9jh8jZ2d54F3Dn36Y0a8C6eI/RFOME/tLCFJ42hfOxdclfa29lPSNCmX5ekxnw==" crossorigin="anonymous"></script>
+    <script async src="{{asset "js/barebones.min.js"}}"></script>
+    <script async="async" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
+  </body>
+</html>

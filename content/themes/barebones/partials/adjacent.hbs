@@ -1,0 +1,18 @@
+{{#post}}
+<ul class="nav pager">
+  {{#next_post}}
+  <li class="nav-item pager-prev prev">
+    <a data-toggle="tooltip" title="{{title}}" class="newer-posts nav-link" href="{{url}}">
+      <i class="fa fa-fw fa-arrow-left"></i>
+    </a>
+  </li>
+  {{/next_post}}
+  {{#prev_post}}
+  <li class="next pager-next nav-item">
+    <a data-toggle="tooltip" title="{{title}}" class="older-posts nav-link" href="{{url}}">
+      <i class="fa fa-fw fa-arrow-right"></i>
+    </a>
+  </li>
+  {{/prev_post}}
+</ul>
+{{/post}}
